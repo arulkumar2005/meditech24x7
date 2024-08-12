@@ -1,0 +1,170 @@
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(135deg, #003366, #004080); /* Updated gradient colors */
+  padding: 15px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #fff;
+  animation: slideInDown 0.5s ease-in-out;
+ 
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.navbar-logo {
+  color: #fff;
+  font-size: 32px; /* Larger font size for better visibility */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Added transition for hover effect */
+  font-family: 'Lato', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+  margin-right: 400px;
+  
+}
+
+.navbar-logo:hover {
+  color: #ffcc00; /* Gold color for a sophisticated look */
+  transform: scale(1.05); /* Slightly enlarge logo on hover */
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.3s ease;
+ 
+
+}
+
+.navbar-menu.active {
+  transform: translateX(0);
+}
+
+.navbar-item {
+  margin: 0 15px;
+  position: relative; /* Added for pseudo-element positioning */
+  animation: fadeIn 1s ease-in-out;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  display: inline-block; /* Ensures proper hover effects */
+}
+
+.navbar-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #ffcc00; /* Accent color */
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::before {
+  width: 100%;
+}
+
+.navbar-link:hover {
+  color: #ffcc00; /* Matching hover color */
+  transform: translateY(-2px); 
+  font-size: 20px; /* Slightly larger font size on hover */
+}
+
+.navbar-menu-toggle {
+  display: none; /* Hide the menu toggle button on larger screens */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon:nth-child(2) {
+  width: 25px;
+}
+
+.navbar-menu-toggle.active .menu-icon:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.navbar-menu-toggle.active .menu-icon:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-menu-toggle.active .menu-icon:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateX(100%);
+  }
+  
+  .navbar-menu.active {
+    transform: translateX(0);
+  }
+  
+  .navbar-item {
+    margin: 15px 0;
+    text-align: center;
+  }
+  
+  .navbar-menu-toggle {
+    display: flex; /* Show the menu toggle button on smaller screens */
+  }
+}

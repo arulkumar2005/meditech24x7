@@ -1,0 +1,96 @@
+/* User Navbar Styles */
+.user-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #003366, #004080); /* Updated gradient colors */
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 2px solid #fff;
+  animation: slideInDown 0.5s ease-in-out;
+}
+
+.user-navbar .navbar-brand {
+  flex: 1;
+}
+
+.user-navbar .navbar-logo {
+  color: #fff;
+  font-size: 24px; /* Increased font size for better visibility */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  font-family: 'Lato', sans-serif;
+  margin-left: 20px;
+  
+}
+
+.user-navbar .navbar-logo:hover {
+  color: #ffcc00; /* Gold color for hover */
+  transform: scale(1.05); /* Slightly enlarge text on hover */
+}
+
+.user-navbar .navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.user-navbar .navbar-links .nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px; /* Larger font size for better visibility */
+  margin: 0 20px;
+  padding: 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.user-navbar .navbar-links .nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #ffcc00; /* Accent color */
+  transition: width 0.3s ease;
+  
+}
+
+.user-navbar .navbar-links .nav-link:hover::before {
+  width: 100%;
+}
+
+.user-navbar .navbar-links .nav-link:hover {
+  color: #ffcc00; /* Matching hover color */
+  transform: translateY(-2px);
+  font-size: 20px; /* Slightly larger font size on hover */
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+  .user-navbar .navbar-links {
+    display: none; /* Hide links on smaller screens */
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.navbar-links{
+  margin-right: 40px;
+}

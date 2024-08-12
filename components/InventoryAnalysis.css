@@ -1,0 +1,110 @@
+/* src/components/InventoryAnalysis.css */
+
+.inventory-analysis {
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 100px;
+}
+
+.inventory-analysis h2 {
+    margin-bottom: 40px;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.analysis-statement {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+}
+
+.charts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.chart-col {
+    flex: 1 1 100%;
+    max-width: 400px;
+    margin: 10px;
+}
+
+.chart-card {
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-color: #fff;
+    min-height: 350px;
+}
+
+.details-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.details-col {
+    flex: 1 1 100%;
+    max-width: 600px;
+    margin: 10px;
+}
+
+.details-card {
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-color: #fff;
+    min-height: 300px;
+}
+
+.details-table {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.table th, .table td {
+    text-align: center;
+    padding: 12px;
+}
+
+.table th {
+    background-color: #e9ecef;
+    color: #333;
+    font-weight: 600;
+}
+
+.table td {
+    color: #666;
+}
+
+@media (min-width: 576px) {
+    .chart-col {
+        flex: 1 1 48%;
+    }
+    .details-col {
+        flex: 1 1 48%;
+    }
+}
+
+@media (min-width: 768px) {
+    .chart-col {
+        flex: 1 1 30%;
+    }
+    .details-col {
+        flex: 1 1 30%;
+    }
+}

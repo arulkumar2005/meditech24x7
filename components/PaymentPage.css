@@ -1,0 +1,146 @@
+.payment-page {
+  padding: 20px;
+  background-color: #f0f4f8; /* Light grey-blue background */
+  margin-top: 80px; /* Reduced margin for a tighter layout */
+  font-family: 'Lato', sans-serif;
+}
+
+.payment-container {
+  max-width: 700px; /* Reduced max-width for a more compact form */
+  margin: 0 auto;
+  background-color: #ffffff; /* White background for the form */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  position: relative;
+  overflow: hidden;
+}
+
+.payment-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(0, 150, 136, 0.1), transparent);
+  z-index: 0;
+}
+
+.payment-container h1 {
+  font-size: 28px; /* Slightly smaller font size for a more compact look */
+  color: #004d40; /* Dark teal color for headings */
+  margin-bottom: 15px;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.form-section {
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.form-section h2 {
+  font-size: 20px; /* Reduced font size for section titles */
+  color: #00796b; /* Teal color for section titles */
+  margin-bottom: 10px;
+  border-bottom: 2px solid #004d40;
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 15px; /* Reduced margin between form groups */
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px; /* Smaller font size for labels */
+  color: #004d40;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px; /* Smaller font size for input fields */
+  border: 2px solid #00796b;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group textarea {
+  height: 80px; /* Reduced height for text area */
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #004d40;
+  box-shadow: 0 0 6px rgba(0, 77, 64, 0.3);
+}
+
+.radio-group {
+  margin: 0;
+}
+
+.radio-group label {
+  display: block;
+  font-size: 14px; /* Smaller font size for radio labels */
+  color: #004d40;
+  margin-bottom: 8px;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 8px; /* Smaller margin between radio button and label */
+  accent-color: #00796b;
+}
+
+.payment-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px; /* Adjusted font size for a more compact button */
+  color: #fff;
+  background: linear-gradient(45deg, #402E7A, #4B70F5);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.payment-button:hover {
+  background: linear-gradient(45deg, #4B70F5, #402E7A);
+  transform: scale(1.03); /* Slightly smaller scale for hover effect */
+}
+
+.success-message {
+  text-align: center;
+  padding: 15px;
+  background-color: #e8f5e9;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.success-icon {
+  font-size: 50px;
+  color: #4caf50;
+}
+
+.success-message h2 {
+  font-size: 22px; /* Slightly smaller font size for success message */
+  color: #4caf50;
+  margin-top: 10px;
+  font-weight: 600;
+}

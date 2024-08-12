@@ -1,0 +1,45 @@
+.about-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 900px; 
+  margin: 0 auto; 
+  box-shadow: 2px 2px 2px 3px black;
+  margin-top: 100px;
+}
+
+.about-page h1 {
+  text-align: center;
+  color: #0d47a1;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+.inventory-details, .contact {
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.inventory-details h2, .contact h2 {
+  color: #0d47a1;
+  border-bottom: 2px solid #ff7043;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+.inventory-details p, .contact p {
+  text-align: center;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.contact a {
+  color: #ff5722;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline; 
+}

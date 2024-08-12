@@ -1,0 +1,248 @@
+/* General Styles */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f4f8, #e0eafc);
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  border-radius: 20px;
+  width: 100vw;
+  min-height: 100vh;
+  animation: fadeIn 2s ease-in-out;
+  overflow-x: hidden;
+}
+
+.header_hom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 60px;
+  animation: slideDown 1s ease-in-out;
+}
+
+.logo {
+  width: 50%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid #007bff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button-container {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  margin-right: 150px;
+  margin-top: 80px;
+}
+
+.home-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.home-btn-register {
+  background: linear-gradient(45deg, #1F316F, #5B99C2);
+}
+
+.home-btn-login {
+  background: linear-gradient(45deg, #402E7A, #4B70F5);
+}
+
+.home-btn:hover {
+  transform: scale(1.05);
+}
+
+.header_hom h1 {
+  font-size: 4rem;
+  color: #333;
+  margin: 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.intro-section {
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.features-section {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.feature {
+  background: #fdfdfd;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, #fff, #f9f9f9);
+  box-shadow: 2px 3px 2px 3px aqua;
+  padding-left: 5px;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgb(80, 150, 241);
+}
+
+.medicines-section {
+  width: 100%;
+  text-align: center;
+ 
+}
+
+.medicines-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+ 
+}
+
+.medicines-list li {
+  background: linear-gradient(135deg, #fff, #f9f9f9);
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 25%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 2px 2px 1px rgb(80, 150, 241);
+}
+
+.medicines-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 16px rgb(80, 150, 241);
+
+}
+
+.contact-section {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.contact-icons a {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  color: #007bff;
+}
+
+.footer_hom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer_hom p {
+  color: #333;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Heart shape */
+.heart {
+  position: relative;
+  width: 120px; /* Adjust size as needed */
+  height: 120px; /* Adjust size as needed */
+  background: #e74c3c; /* Heart color */
+  border-radius: 50% 50% 0 0; /* Top-left and top-right rounded */
+  margin: 1rem auto;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 120px; /* Adjust size as needed */
+  height: 120px; /* Adjust size as needed */
+  background: #e74c3c; /* Heart color */
+  border-radius: 50%; /* Circular shape */
+}
+
+.heart::before {
+  top: -60px; /* Position on top left */
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 60px; /* Position on top right */
+}
